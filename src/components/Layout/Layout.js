@@ -1,18 +1,18 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import { Thread } from "./SiteLogo/SiteLogo"
+import { Thread } from "../SiteLogo/SiteLogo"
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../../utils/typography"
 
 class Layout extends React.Component {
   render() {
     const { title, hideHeader, children } = this.props
     const header = title && !hideHeader && (
       <h3
-        className="serif"
+        className="display"
         style={{
-          margin: "20px",
+          margin: rhythm(1),
           fontSize: "1.5rem",
           textTransform: "uppercase",
           letterSpacing: "1px",
@@ -30,7 +30,8 @@ class Layout extends React.Component {
           <Thread
             style={{
               width: "40px",
-              margin: "0 10px 0",
+              margin: 0,
+              marginRight: rhythm(1 / 4),
               verticalAlign: "middle",
             }}
           />

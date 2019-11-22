@@ -1,27 +1,13 @@
 import Typography from "typography"
 
-// CONSIDER USING FOR DISPLAY
-// font-family: 'Amarante', cursive;
-// font-family: 'Calistoga', cursive;
-// font-family: 'Baskervville', serif;
-// font-family: 'Playfair Display', serif;
-
 const serif = ["Merriweather", "Georgia", "serif"]
-const sans = [
-  "Montserrat",
-  "Helvetica Neue",
-  "Segoe UI",
-  "Helvetica",
-  "Arial",
-  "sans-serif",
-]
 const display = ["Playfair Display", ...serif]
 const mono = ["PT Mono", "monospace"]
 
 const typography = new Typography({
   baseFontSize: "16px",
   baseLineHeight: 1.666,
-  headerFontFamily: sans,
+  headerFontFamily: serif,
   bodyFontFamily: serif,
   googleFonts: [
     {
@@ -36,14 +22,11 @@ const typography = new Typography({
       name: "Merriweather",
       styles: ["400", "400i", "700", "700i"],
     },
-    {
-      name: "Montserrat",
-      styles: ["700"],
-    },
   ],
   overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
-    ".serif": {
+    ".display": {
       fontFamily: display.join(","),
+      fontWeight: 700,
     },
     code: {
       fontFamily: mono.join(","),
@@ -52,12 +35,13 @@ const typography = new Typography({
       color: "#e74c3c",
       textDecoration: "none",
     },
+    "a:visited": {
+      color: "#e74c3c",
+      textDecoration: "none",
+    },
     "a:hover": {
       color: "#c0392b",
       textDecoration: "none",
-    },
-    "a:visited": {
-      color: "#e74c3c",
     },
   }),
 })

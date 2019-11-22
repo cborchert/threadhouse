@@ -1,27 +1,117 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's blog starter
-</h1>
+# Basics
 
-Kick off your project with this blog boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+## Local Installation
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+Navigate to the newly created, empty folder on your local machine where you want to install the project in the commandline terminal. Once there, clone the git repo buy running:
 
-## 🚀 Quick start
+```shell
+git clone . https://github.com/cborchert/threadhouse.git
+```
 
-1.  **Create a Gatsby site.**
+git will download the contents of the repo into the folder. Once done, you should be ready to go.
 
-    Use the Gatsby CLI to create a new site, specifying the blog starter.
+You'll need to install the npm dependencies before running the site locally. Do that by running `yarn` or `npm install`.
 
-    ```shell
-    # create a new Gatsby site using the blog starter
-    gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog
-    ```
+## Spinning up the local server
+
+After cloning the repo into a local folder, you'll need to download the Gatsby Command Line Interface (CLI) as an executable. You can do this by running `npm install -g gatsby-cli` in the command line.
+
+You can test whether the Gatsby CLI has correctly been installed by trying to run `gatsby -v` from the command line. If you get something like
+
+```
+Gatsby CLI version: 2.7.17
+Gatsby version: 2.17.11
+```
+
+displayed in the command line, you're golden. If you have a message like `command not found: gatsby`, then you done messed up somewhere because gatsby has not been installed globally as a command.
+
+Now you can spin up the local site using `gatsby develop`. After a bit of spinn up time and some messages about loading and building, you should see a success message like
+
+```
+You can now view gatsby-starter-blog in the browser.
+⠀
+  http://localhost:8000/
+⠀
+View GraphiQL, an in-browser IDE, to explore your site's data and schema
+⠀
+  http://localhost:8000/___graphql
+```
+
+The site is now running at http://localhost:8000, and you can visit it from any browser on your local machine. Additionally, any saved changes to the files in the codebase should be reflected immediately. The local server has what's called a "hot reloader" so it will detect any changes and reload the server... AND THE TABS IN YOUR BROWSER 🤖.
+
+## Gatsby gives me an error when starting up...
+
+... and http://localhost:8000 isn't available.
+
+This is the most annoying problem. You probably need to do some reading and googling, and you may need to restart the local browser. You PROBABLY did one of the following:
+
+- Deleted files you shouldn't have
+- Added a blogpost without the correct front matter
+- Recently changed or broke `gatsby-config.js` or `gatsby-node.js`
+
+The good news is that you'll get some good practice reading errors. Read through the error log. 99% of the time the answer is in there, even if it seems a bit intimidating to read. Just start at the top where the first error happened and go through and try to figure out what it's trying to tell you. You can do it!!
+
+# Additional information
+
+## Contributing blog posts
+
+Any new blog posts be Markdown files, and should be go in `./content/blog/YOUR-BLOG-POST-SLUG/index.md`. Make your changes in a new branch and make a pull request on the github repo. Unless you the have authorization and **audacity** to commit directly into master and push live.
+
+```
+./ (root)
+├── content/
+| ├── blog/
+| | ├── YOUR-BLOG-POST-SLUG/
+| | | ├── index.md
+```
+
+### Post slug
+
+The folder name will determine the slug, so if you put your blog post in `./content/blog/foo-bar/index.md`, then the post will be accessible at https://thread.house/foo-bar/
+
+### Frontmatter
+
+Your post needs to have the correct frontmatter, or Gatsby might break.
+
+```
+---
+title: My title goes here
+date: "2019-11-22"
+description: "The blog excerpt"
+---
+```
+
+Hopefully, we'll be adding an author field shortly
+
+### WTF is Markdown? Who's Mark???
+
+Markdown is a way of writing rich text using plain text. 💥
+
+There are plenty of [tutorials](https://www.markdowntutorial.com/lesson/1/), some [nice documentation](https://www.markdownguide.org/basic-syntax/), and some [online editors](https://markdownlivepreview.com/). Otherwise you can use a tool like [typora](https://www.typora.io/) to edit your contributions, or you can install one of several plugins ([1](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one), [2](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)) to your code editor to make your life easier.
+
+### Did you know that MDX exists?
+
+Yes. And it's cool. But maybe unnecessary for this project. If not, I'll add it 😉.
+
+## How was it built??
+
+<iframe src="https://giphy.com/embed/RluM0kvZXkLS0" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+This is a Gatsby site. We created it using a starter `gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog`.
+
+## Deployment
+
+Any new commits to the master branch will cause a deployment on the site hosted at netlify: https://pedantic-euler-dbd998.netlify.com/
+
+This will also update http://www.thread.house/
+
+## Additional Credits
+
+Thread icon made by <a href="https://www.flaticon.com/authors/nikita-golubev" title="Nikita Golubev">Nikita Golubev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+# 🚀 Gatsby Quick start
+
+This section was more or less copied from the initial Gatsby documentation, but it could be a good place to start learning. We'll make an attempt to get things a bit more clear soon
 
 1.  **Start developing.**
 
@@ -89,9 +179,3 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 - **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog)
-
-<!-- AUTO-GENERATED-CONTENT:END -->

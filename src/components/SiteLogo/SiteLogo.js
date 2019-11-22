@@ -6,9 +6,8 @@ import thread from "./thread.svg"
 import "./SiteLogo.css"
 
 // TODO URGENT CREDIT AUTHOR
-{
-  /* <div>Icons made by <a href="https://www.flaticon.com/authors/nikita-golubev" title="Nikita Golubev">Nikita Golubev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> */
-}
+/* <div>Icons made by <a href="https://www.flaticon.com/authors/nikita-golubev" title="Nikita Golubev">Nikita Golubev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> */
+
 const SiteLogo = () => {
   const data = useStaticQuery(graphql`
     query LogoQuery {
@@ -50,7 +49,12 @@ const SiteLogo = () => {
 }
 
 export const Thread = ({ style = {} }) => (
-  <img className="SiteLogo__threadIcon" style={style} src={thread} />
+  <img
+    className="SiteLogo__threadIcon"
+    style={style}
+    src={thread}
+    alt="Thread.house logo"
+  />
 )
 
 export default SiteLogo
