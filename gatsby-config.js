@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Threadhouse`,
+    title: `Thread · house`,
     author: `Christopher Borchert and Dave Fuhrman`,
     description: `A coding blog for crazy people`,
     siteUrl: `https://pedantic-euler-dbd998.netlify.com/`,
@@ -60,7 +60,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/thread.png`,
       },
     },
     `gatsby-plugin-offline`,
