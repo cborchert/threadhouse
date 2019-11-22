@@ -95,7 +95,7 @@ Yes. And it's cool. But maybe unnecessary for this project. If not, I'll add it 
 
 ## How was it built??
 
-<iframe src="https://giphy.com/embed/RluM0kvZXkLS0" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+![Aliens](./content/assets/aliens.webp)
 
 This is a Gatsby site. We created it using a starter `gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog`.
 
