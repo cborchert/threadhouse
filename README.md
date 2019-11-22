@@ -8,9 +8,11 @@ Navigate to the newly created, empty folder on your local machine where you want
 git clone . https://github.com/cborchert/threadhouse.git
 ```
 
-git will download the contents of the repo into the folder. Once done, you should be ready to go.
+git will download the contents of the repo into the folder.
 
 You'll need to install the npm dependencies before running the site locally. Do that by running `yarn` or `npm install`.
+
+Once done, you should be ready to go.
 
 ## Spinning up the local server
 
@@ -25,7 +27,7 @@ Gatsby version: 2.17.11
 
 displayed in the command line, you're golden. If you have a message like `command not found: gatsby`, then you done messed up somewhere because gatsby has not been installed globally as a command.
 
-Now you can spin up the local site using `gatsby develop`. After a bit of spinn up time and some messages about loading and building, you should see a success message like
+Now you can spin up the local site using `gatsby develop`. After a bit of spin up time and some messages about loading and building, you should see a success message like
 
 ```
 You can now view gatsby-starter-blog in the browser.
@@ -55,7 +57,7 @@ The good news is that you'll get some good practice reading errors. Read through
 
 ## Contributing blog posts
 
-Any new blog posts be Markdown files, and should be go in `./content/blog/YOUR-BLOG-POST-SLUG/index.md`. Make your changes in a new branch and make a pull request on the github repo. Unless you the have authorization and **audacity** to commit directly into master and push live.
+Any new blog posts must be Markdown files, and should be go in `./content/blog/YOUR-BLOG-POST-SLUG/index.md`. Make your changes in a new branch and make a pull request on the github repo. Unless you the have authorization and **audacity** to commit directly into master and push live.
 
 ```
 ./ (root)
