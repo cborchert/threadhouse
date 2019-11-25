@@ -67,3 +67,9 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+# Content drafts 
+# Anything you don't want to upload, but that you want to  
+# work on locally should go in /content/blog/drafts
+content/blog/drafts
+content/blog/drafts/**/*

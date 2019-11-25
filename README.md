@@ -67,9 +67,15 @@ Any new blog posts must be Markdown files, and should be go in `./content/blog/Y
 | | | ├── index.md
 ```
 
+### Drafts
+
+The directory `content/blog/drafts` and all its subdirectories and content has been added to the `.gitignore` file, so anything placed in that folder will not be seen by git. You can safely work on files in this directory without worrying that they will accidentally be uploaded or published. They will still show up on the local version of the site at https://localhost:8000/drafts/PATH-TO-POST, but never on the live version of the site.
+
 ### Post slug
 
 The folder name will determine the slug, so if you put your blog post in `./content/blog/foo-bar/index.md`, then the post will be accessible at https://thread.house/foo-bar/
+
+I'm using the format `./content/blog/YEAR/MONTH/SLUG/index.md`, so, for, example `content/blog/2019/11/hello-world/index.md` is accessible at https://thread.house/2019/11/hello-world/
 
 ### Frontmatter
 
