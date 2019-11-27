@@ -1,6 +1,6 @@
 ---
 title: A touch of git, part one - Repo, commit, pull, push
-date: 11-27-2019
+date: 2019-11-27
 description: A light introduction to git and some basic related terms in layman's terms.
 author: Chris
 ---
@@ -35,7 +35,7 @@ If at some point, you wanted to check out what the file looked like before we de
 
 Git additionally provides us with ways of making it easy to share to a centralized repository where others can either pull down a copy of the project or contribute their own changes and push them up to the repository.
 
-Finally, git has built-in functionalities to help with problems you might encounter: building isolated workspaces/versions of your project (`branches`), managing the timeline by removing or undoing a specific modifications/savepoints, or to resolve any problems (`conficts`) that arise when two people try to edit the same part of the same file, to name a few. Git is a very rich organalizational tool, but it also has enough simple use-cases for a basic user to take advantage of it with just a little introduction.
+Finally, git has built-in functionalities to help with problems you might encounter: building isolated workspaces/versions of your project (`branches`), managing the timeline by removing or undoing a specific modifications/savepoints, or to resolve any problems (`conflicts`) that arise when two people try to edit the same part of the same file, to name a few. Git is a very rich organalizational tool, but it also has enough simple use-cases for a basic user to take advantage of it with just a little introduction.
 
 ## Should I use it on my project? I'm working all alone, and I'm not sharing it.
 
