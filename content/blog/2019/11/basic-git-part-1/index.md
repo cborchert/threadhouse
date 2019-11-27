@@ -54,9 +54,10 @@ A git repository is a collection of files, usually a directory which uses git to
 A commit is a single snapshot or savepoint of the data in a `repository`. Each row in the table above is a commit.
 
 e.g.
-| | | | | |
---- | --- | --- | --- | ---
-1 | 10-01-2019 | Created file | file.txt | Dave
+
+| id  | date       | message      | files changed | Author |
+| --- | ---------- | ------------ | ------------- | ------ |
+| 1   | 10-01-2019 | Created file | file.txt      | Dave   |
 
 A commit notes the differences between this `commit` and the previous `commit` along with a message, a unique id/reference, the date, author, etc.
 
@@ -79,7 +80,7 @@ Two people are working on a project. Let's call them Dave and Chris. Dave create
 
 He's pretty happy with his work, and he decides to make a savepoint, so he `commit`s his work. He adds the message "Initiated the project. Created file.txt"
 
-The next day, Dave looks at his work, and he decided that it can be improved.
+The next day, Dave looks at his work, and he decides that it can be improved.
 
 - He changes the content of the file to `Hello, world` and saves his work
 - He realizes he forgot a period and changes the content of the file to `Hello, world.` and saves.
@@ -115,6 +116,6 @@ In order to keep this post light (respecting both your time and mine), that's go
 - [The github intro to git](https://guides.github.com/activities/hello-world/)
 - [The git book](https://git-scm.com/book/en/v2)
 
-[^1]: Note of interest: git saves the _differences_ between the previous snapshot of the project and the new snapshot at each savepoint (`commit`), and, in doing so, reduces the size of the project. For example, imagine that you have a 10 kilobyte text file, but the last line of the file was missing a period, so you make a new version, adding a period, and then create a snapshot. The snapshot would just be instructions to a single character to the last line. That means, that even though you have 2 versions of a 10kb file, the total size will be much less than 10kb!
+[^1]: Note of interest: git saves the _differences_ between the previous snapshot of the project and the new snapshot at each savepoint (`commit`), and, in doing so, reduces the size of the project. For example, imagine that you have a 10 kilobyte text file, but the last line of the file was missing a period, so you make a new version, adding a period, and then create a snapshot. The snapshot would just be instructions to a single character to the last line. That means, that even though you have 2 versions of a 10kb file, the total size will be much less than the 20kb of saving basically the same file twice!
 [^2]: (Imagine for example, that after Chris pulled the repo down from GitHub, Dave quickly made a commit which changed the text to "Hello, world?" and pushed it up. What would happen when Chris tried to push up his changes??)
 [^3]: Note that some people prefer to use the command line to deal with their git repositories, like I do, others use a graphical user interface (GUI) such as [GitKraken](https://www.gitkraken.com/) or the plugins built in their text editor like VSCode. I'd suggest learning in the command line as typing in the commands will help you memorize them. Afterwards, do whatever makes you look the coolest and helps you be the most productive.
