@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import thread from "./thread.svg"
 
-import "./SiteLogo.css"
+import "./SiteLogo.scss"
 
 // TODO URGENT CREDIT AUTHOR
 /* <div>Icons made by <a href="https://www.flaticon.com/authors/nikita-golubev" title="Nikita Golubev">Nikita Golubev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> */
@@ -48,12 +48,12 @@ const SiteLogo = () => {
   )
 }
 
-export const Thread = ({ style = {} }) => (
+export const Thread = ({ className, ...rest }) => (
   <img
-    className="SiteLogo__threadIcon"
-    style={style}
+    className={`SiteLogo__threadIcon ${className}`}
     src={thread}
     alt="Thread.house logo"
+    {...rest}
   />
 )
 

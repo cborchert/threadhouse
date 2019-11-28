@@ -10,21 +10,28 @@
   font-size: 3rem;
   text-align: center;
   font-family: "Georgia", "serif";
-}
-
-.SiteLogo__title span {
-  display: grid;
-  justify-content: center;
-  align-content: center;
+  /** desktop */
+  @media screen and (min-width: 768px) {
+    font-size: 5rem;
+  }
+  span {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
 }
 
 .SiteLogo__description {
   text-align: center;
   font-style: italic;
-}
-
-.SiteLogo__description div {
-  margin: 1rem 0;
+  font-size: 1rem;
+  /** desktop */
+  @media screen and (min-width: 768px) {
+    font-size: 1.3rem;
+  }
+  div {
+    margin: 1rem 0;
+  }
 }
 
 .SiteLogo__dongle {
@@ -38,15 +45,5 @@
 .SiteLogo__threadIcon {
   width: 40px;
   display: inline-block;
-  margin: 20px 0;
-}
-
-@media screen and (min-width: 768px) {
-  .SiteLogo__title {
-    font-size: 5rem;
-  }
-
-  .SiteLogo__description {
-    font-size: 1.2rem;
-  }
+  margin: 1.5rem 0;
 }

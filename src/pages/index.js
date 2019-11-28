@@ -4,7 +4,8 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import SiteLogo from "../components/SiteLogo/SiteLogo"
 import SEO from "../components/SEO/SEO"
-// import { rhythm } from "../utils/typography"
+
+import "./Home.scss"
 
 class BlogIndex extends React.Component {
   render() {
@@ -16,23 +17,15 @@ class BlogIndex extends React.Component {
         <SiteLogo />
         <Layout location={this.props.location} hideHeader={true}>
           <SEO title="All posts" />
-          <h2 style={{ fontSize: "2rem" }}>Posts</h2>
+          <h2 className="Home__postsIntro">Posts</h2>
           <hr />
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <article key={node.fields.slug}>
+              <article key={node.fields.slug} className="Home__post">
                 <header>
-                  <h2
-                    style={
-                      {
-                        // marginBottom: rhythm(1 / 4),
-                      }
-                    }
-                  >
-                    <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                      {title}
-                    </Link>
+                  <h2 className="Home__postTitle">
+                    <Link to={node.fields.slug}>{title}</Link>
                   </h2>
                   <small>{node.frontmatter.date}</small>
                 </header>

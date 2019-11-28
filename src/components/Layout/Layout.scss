@@ -1,0 +1,35 @@
+@import "../../styles/variables.scss";
+
+.Layout {
+  margin: 0 auto;
+  /** ch = 1 character width */
+  max-width: 60ch;
+  padding: 1.5rem 0.75rem;
+}
+
+.LayoutHeader {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin: 0.5rem auto 2rem;
+}
+
+.LayoutHeader__link {
+  box-shadow: none;
+  text-decoration: none;
+  &,
+  &:active,
+  &:visited,
+  &:link,
+  &:hover,
+  &:focus {
+    color: $text;
+  }
+}
+
+.LayoutHeader__icon {
+  width: 40px;
+  margin: 0 0.25rem 0.2rem 0;
+  vertical-align: middle;
+}

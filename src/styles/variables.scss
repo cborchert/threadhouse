@@ -1,0 +1,38 @@
+$white: #fff;
+$black: #333;
+$red: #e74c3c;
+
+$background: $white;
+$text: $black;
+$primary: $red;
+
+$link: $primary;
+$linkhover: darken($primary, 10%);
+
+$bordercolor: lighten($text, 40%);
+$borderwidth: 3px;
+$border: $borderwidth solid $bordercolor;
+$borderlight: 1px solid lighten($bordercolor, 10%);
+
+$lineheight: 1.85;
+$marginafter: 2rem;
+
+$fontsize: 16px;
+
+$fontfamily-display: "Playfair Display", "Merriweather", "Georgia", "serif";
+$fontfamily-serif: "Merriweather", "Georgia", "serif";
+$fontfamily-sans: "PT Sans", "Arial", "sans";
+$fontfamily-mono: "PT Mono", "monospace";
+
+$fontfamily-title: $fontfamily-serif;
+$fontfamily-text: $fontfamily-serif;
+$fontfamily-code: $fontfamily-mono;
+
+$indent: 2ch;
+
+$tablebackground: $white;
+$tablebackgroundalt: rgba($text, 0.05);
+
+// const serif = []
+// const display = [, ...serif]
+// const mono = []
