@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout/Layout"
 import SiteLogo from "../components/SiteLogo/SiteLogo"
 import SEO from "../components/SEO/SEO"
-import { rhythm } from "../utils/typography"
+// import { rhythm } from "../utils/typography"
 
 class BlogIndex extends React.Component {
   render() {
@@ -24,9 +24,11 @@ class BlogIndex extends React.Component {
               <article key={node.fields.slug}>
                 <header>
                   <h2
-                    style={{
-                      marginBottom: rhythm(1 / 4),
-                    }}
+                    style={
+                      {
+                        // marginBottom: rhythm(1 / 4),
+                      }
+                    }
                   >
                     <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                       {title}

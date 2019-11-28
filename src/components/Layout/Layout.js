@@ -3,8 +3,6 @@ import { Link } from "gatsby"
 
 import { Thread } from "../SiteLogo/SiteLogo"
 
-import { rhythm } from "../../utils/typography"
-
 class Layout extends React.Component {
   render() {
     const { title, hideHeader, children } = this.props
@@ -12,7 +10,7 @@ class Layout extends React.Component {
       <h3
         className="display"
         style={{
-          margin: rhythm(1),
+          // margin: rhythm(1),
           fontSize: "1.5rem",
           textTransform: "uppercase",
           letterSpacing: "1px",
@@ -31,7 +29,7 @@ class Layout extends React.Component {
             style={{
               width: "40px",
               margin: 0,
-              marginRight: rhythm(1 / 4),
+              // marginRight: rhythm(1 / 4),
               verticalAlign: "middle",
             }}
           />
@@ -46,8 +44,8 @@ class Layout extends React.Component {
           style={{
             marginLeft: `auto`,
             marginRight: `auto`,
-            maxWidth: rhythm(24),
-            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+            // maxWidth: rhythm(24),
+            // padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
           }}
         >
           <main>{children}</main>
