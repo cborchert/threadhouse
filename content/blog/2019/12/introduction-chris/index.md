@@ -5,7 +5,7 @@ description: About Chris, another one of the authors at Thread House
 author: Chris
 ---
 
-Hi, my name is Chris, I'm a frontend developer living in Conflans Sainte Honorine, just outside of Paris, France. I like cooperative board games, gymnastics (tricking), dream pop, and weird fiction. I'm always trying to learn more (good thing, because this job demands it), and build things with what I've learned. I also have a tendancy to start ambitious personal coding projects and not finish them.
+Hi, my name is Chris. I'm a frontend developer living in Conflans Sainte Honorine, just outside of Paris, France. I like cooperative board games, gymnastics (tricking), dream pop, and weird fiction. I'm always trying to learn more (good thing, because this job demands it), and build things with what I've learned. I also have a tendancy to start ambitious personal coding projects and not finish them.
 
 While I've been interested in the _idea_ of writing, I've never invested heavily in the practice of writing regularly and publicly. I'm hoping to use this blog as an opportunity to share what I've learned and what I'm working on, mostly in the space of frontend development. I'm interested in learning more about math, basic computer science, functional programming, and machine learning. In writing here, I hope Dave and I will be able to keep an ongoing record of our projects and what we're learning, and, with some luck, help some others along the way.
 
