@@ -165,3 +165,14 @@ tr {
     background: $tablebackgroundalt;
   }
 }
+
+/** super and subscripts */
+sup {
+  font-size: 0.8em;
+  vertical-align: super;
+} 
+
+sub {
+  font-size: 0.8em;
+  vertical-align: sub;
+}
