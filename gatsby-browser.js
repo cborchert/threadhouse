@@ -1,6 +1,8 @@
 // custom typefaces
 import "typeface-montserrat"
 import "typeface-merriweather"
+// this adds math typescripting
+import "katex/dist/katex.min.css"
 
 import "./src/styles/global.scss"
 
