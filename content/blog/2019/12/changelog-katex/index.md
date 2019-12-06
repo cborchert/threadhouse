@@ -1,6 +1,6 @@
 ---
 title: "Changelog: Katex math typesetting"
-date: 2019-12-05
+date: 2019-12-05 7:00am
 description: We added a plugin to add Katex math typesetting.
 author: Dave
 ---

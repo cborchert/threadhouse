@@ -1,6 +1,6 @@
 ---
 title: "Changelog: Katex math typesetting II" 
-date: 2019-12-05
+date: 2019-12-05 8:00am
 description: We added a plugin to add Katex math typesetting.
 author: Dave
 ---
@@ -9,7 +9,7 @@ Alright!
 
 So after spell checking my blog entry, the first thing I did was go into the terminal and try to git push. That was wrong. Luckily, it didn't work.
 
-1) The first useful thing I did was check my status
+1) The first _useful_ thing I did was check my status
 
 ``` terminal
 myProjectDirectory>git status
