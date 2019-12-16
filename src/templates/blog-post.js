@@ -1,4 +1,5 @@
 import React from "react"
+import Helmet from "react-helmet"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/Layout/Layout"
@@ -15,6 +16,9 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
+        <Helmet>
+          <body className={`author--${postAuthor}`} />
+        </Helmet>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
