@@ -45,8 +45,6 @@ class BlogIndex extends React.Component {
     // get all the posts from the data
     const posts = data.allMarkdownRemark.edges
 
-    console.log(posts)
-
     return (
       <React.Fragment>
         <SiteLogo />
@@ -65,11 +63,6 @@ export default BlogIndex
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
