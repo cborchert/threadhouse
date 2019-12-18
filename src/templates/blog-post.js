@@ -1,4 +1,5 @@
 import React from "react"
+import Helmet from "react-helmet"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/Layout/Layout"
@@ -11,9 +12,20 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+    const postAuthor = post.frontmatter.author || "House"
+
+    // replace any series of non alphanumeric characters with a dash to make sure that CSS can handle the classname
+    // this transforms 
+    //   "Dave" into "dave", 
+    //   "Dave & Chris" into "dave-chris", 
+    //    and "ça c'est le chiffre       27" into "-a-c-est-le-chiffre-27"
+    const bodyClass = `author--${postAuthor.toLowerCase().replace(/[\W_]+/g,"-")}`;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
+        <Helmet>
+          <body className={bodyClass} />
+        </Helmet>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
@@ -21,7 +33,8 @@ class BlogPostTemplate extends React.Component {
         <article className="Post">
           <header className="Post__details">
             <h1 className="Post__title">{post.frontmatter.title}</h1>
-            <small>{post.frontmatter.date}</small>
+            <div><small>By {postAuthor}</small></div>
+            <div><small>{post.frontmatter.date}</small></div>
           </header>
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr />
@@ -67,6 +80,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        author
       }
     }
   }

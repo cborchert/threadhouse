@@ -14,6 +14,7 @@ body {
   font-size: $fontsize;
   font-family: $fontfamily-text;
   line-height: $lineheight;
+  transition: 600ms;
 }
 
 strong,
@@ -176,3 +177,12 @@ sub {
   font-size: 0.8em;
   vertical-align: sub;
 }
+
+/** Custom post styles */
+
+/**
+body.author--Dave {
+  background: black;
+  color: white;
+}
+*/
