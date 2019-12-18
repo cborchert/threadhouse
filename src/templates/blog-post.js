@@ -14,10 +14,17 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext
     const postAuthor = post.frontmatter.author || "House"
 
+    // replace any series of non alphanumeric characters with a dash to make sure that CSS can handle the classname
+    // this transforms 
+    //   "Dave" into "dave", 
+    //   "Dave & Chris" into "dave-chris", 
+    //    and "ça c'est le chiffre       27" into "-a-c-est-le-chiffre-27"
+    const bodyClass = `author--${postAuthor.toLowerCase().replace(/[\W_]+/g,"-")}`;
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <Helmet>
-          <body className={`author--${postAuthor}`} />
+          <body className={bodyClass} />
         </Helmet>
         <SEO
           title={post.frontmatter.title}
