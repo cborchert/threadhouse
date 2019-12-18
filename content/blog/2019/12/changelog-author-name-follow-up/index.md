@@ -1,7 +1,7 @@
 ---
 title: "Changelog: Add author name to posts (follow up)"
 date: 2019-12-18T10:00
-description: Author names are no available, and we can now do author-based styles for blog posts
+description: Author names are now available, and we can now do author-based styles for blog posts
 author: Chris
 ---
 
