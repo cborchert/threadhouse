@@ -1,0 +1,17 @@
+{
+  "Blog post frontmatter (Chris)": {
+    "prefix": "fmc",
+    "scope": "markdown",
+    "description": "Prepares the frontmatter for a blogpost by Chris.",
+    "body": [
+      "---",
+      "title: '${1}'",
+      "date: ${2:${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}}",
+      "author: ${3:Chris}",
+      "description: ${4}",
+      "---",
+      "",
+      "$0"
+    ]
+  }
+}

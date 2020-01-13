@@ -130,9 +130,14 @@ ol {
   }
 }
 
-/** images */
-img {
+/** images and videos*/
+img,
+video {
   max-width: 100%;
+}
+
+video {
+  margin-bottom: 1rem;
 }
 
 /** rules */
@@ -171,7 +176,7 @@ tr {
 sup {
   font-size: 0.8em;
   vertical-align: super;
-} 
+}
 
 sub {
   font-size: 0.8em;
