@@ -3,6 +3,7 @@ title: Update your packages after pulling!
 date: 2019-12-04T15:26
 description: A quick reminder to update the installed npm packages after you pull down updates from a repo
 author: Chris
+threads: ["meta"]
 ---
 
 Hi, Dave,
@@ -18,7 +19,7 @@ If you don't run `git pull` before your next push, you'll be forced to eventuall
 
 If you don't run `yarn` or `npm install`, after the `git pull` then the next time your `./node_modules` directory will be out of date, and you may run into an error when spinning up the project, by running `gatsby develop`.
 
-That's about it. I'll include a more detailed example below so you know what to expect. 
+That's about it. I'll include a more detailed example below so you know what to expect.
 
 -- Chris
 
@@ -44,8 +45,8 @@ Updating 6a6b9ba..3094d11
 Fast-forward
  content/blog/2019/12/changelog-mermaid/index.md | 218 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  gatsby-config.js                                |   3 +-
- package.json                                    |   3 +- 
- yarn.lock                                       | 565 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++---- 
+ package.json                                    |   3 +-
+ yarn.lock                                       | 565 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
  4 files changed, 773 insertions(+), 16 deletions(-)
  create mode 100644 content/blog/2019/12/changelog-mermaid/index.md
 ```

@@ -3,6 +3,7 @@ title: "On VS Code Snippets"
 date: 2020-01-13T09:36
 author: Chris
 description: How to save time on repetative tasks in VSCode using code snippets
+threads: ["dev-tips"]
 ---
 
 Hi Dave,
