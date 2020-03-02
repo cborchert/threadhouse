@@ -5,37 +5,10 @@ import Layout from "../components/Layout/Layout"
 import SiteLogo from "../components/SiteLogo/SiteLogo"
 import SEO from "../components/SEO/SEO"
 
+import createPostMarkup from "../utils/createPostMarkup"
+import threads from "../../threads"
+
 import "./Home.scss"
-
-/**
- * Given the post data, creates a preview
- * @param {Object} item 
- * @returns {JSX} the post item
- */
-const createPost = (item) => {
-  const { node } = item;
-  const title = node.frontmatter.title || node.fields.slug;
-  const author = node.frontmatter.author || "House";
-
-  return (
-    <article key={node.fields.slug} className="Home__post">
-      <header>
-        <h2 className="Home__postTitle">
-          <Link to={node.fields.slug}>{title}</Link>
-        </h2>
-        <div><small>By {author}</small></div>
-        <div><small>{node.frontmatter.date}</small></div>
-      </header>
-      <section>
-        <p
-          dangerouslySetInnerHTML={{
-            __html: node.frontmatter.description || node.excerpt,
-          }}
-        />
-      </section>
-    </article>
-  )
-}
 
 class BlogIndex extends React.Component {
   render() {
@@ -49,10 +22,22 @@ class BlogIndex extends React.Component {
       <React.Fragment>
         <SiteLogo />
         <Layout location={this.props.location} hideHeader={true}>
-          <SEO title="All posts" />
-          <h2 className="Home__postsIntro">Posts</h2>
+          <SEO title="Home" />
           <hr />
-          {posts.map(createPost)}
+          <h2 className="Home__postsIntro">Threads</h2>
+          <ul>
+            <li>
+              <Link to={`all-posts`}>All posts</Link>
+            </li>
+            {threads.map(({ name, slug }) => (
+              <li key={slug}>
+                <Link to={`thread/${slug}`}>{name}</Link>
+              </li>
+            ))}
+          </ul>
+          <hr />
+          <h2 className="Home__postsIntro">Most Recent Posts</h2>
+          {posts.map(createPostMarkup)}
         </Layout>
       </React.Fragment>
     )
@@ -63,7 +48,10 @@ export default BlogIndex
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 3
+    ) {
       edges {
         node {
           excerpt

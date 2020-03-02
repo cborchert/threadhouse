@@ -3,6 +3,7 @@ title: "git commit --allow-empty"
 date: 2020-01-02T17:00
 description: Sometimes you just want an empty commit.
 author: Chris
+threads: ["git"]
 ---
 
 Hi Dave,

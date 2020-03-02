@@ -1,11 +1,15 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
+const threads = require(`./threads.js`)
+
+const blogPost = path.resolve(`./src/templates/blog-post.js`)
+const threadPage = path.resolve(`./src/templates/thread-page.js`)
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
-  const result = await graphql(
+  const postsResults = await graphql(
     `
       {
         allMarkdownRemark(
@@ -27,12 +31,12 @@ exports.createPages = async ({ graphql, actions }) => {
     `
   )
 
-  if (result.errors) {
-    throw result.errors
+  if (postsResults.errors) {
+    throw postsResults.errors
   }
 
   // Create blog posts pages.
-  const posts = result.data.allMarkdownRemark.edges
+  const posts = postsResults.data.allMarkdownRemark.edges
 
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
@@ -45,6 +49,18 @@ exports.createPages = async ({ graphql, actions }) => {
         slug: post.node.fields.slug,
         previous,
         next,
+      },
+    })
+  })
+
+  threads.forEach(({ name, slug, description }) => {
+    createPage({
+      path: `thread/${slug}`,
+      component: threadPage,
+      context: {
+        thread: slug,
+        name,
+        description,
       },
     })
   })

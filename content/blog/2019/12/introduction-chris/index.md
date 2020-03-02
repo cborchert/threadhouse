@@ -3,6 +3,7 @@ title: Hello, Chris!
 date: 2019-12-03
 description: About Chris, another one of the authors at Thread House
 author: Chris
+threads: ["meta"]
 ---
 
 Hi, my name is Chris. I'm a frontend developer living in Conflans Sainte Honorine, just outside of Paris, France. I like cooperative board games, gymnastics (tricking), dream pop, and weird fiction. I'm always trying to learn more (good thing, because this job demands it), and build things with what I've learned. I also have a tendancy to start ambitious personal coding projects and not finish them.

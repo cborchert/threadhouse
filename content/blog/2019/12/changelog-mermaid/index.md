@@ -3,6 +3,7 @@ title: "Changelog: Mermaid syntax interpretation for simpler charts"
 date: 2019-12-03T12:00
 description: We added a plugin to Gatsby to interpret Mermaid syntax.
 author: Chris
+threads: ["meta", "changelog"]
 ---
 
 This is just a quick note to talk about a plugin we just added to [thread.house](https://www.thread.house) which makes adding basic flowcharts to posts very easy.

@@ -3,6 +3,7 @@ title: A touch of git, part one - Repo, commit, pull, push
 date: 2019-11-27
 description: A light introduction to git and some basic related terms in layman's terms.
 author: Chris
+threads: ["git"]
 ---
 
 The point of this post is to give an overview of git and introduce some basic terms that will be helpful when learning git properly, and using it in personal or shared projects. I'm going to try to keep it light, and, while I might brush over some details a bit quickly, I hopefully won't leave you mystified. This is not meant to be a tutorial, and it will largely ignore several more complicated concepts, but it might prepare you to learn more about git. As much as possible, I will try to use layman's terms if we have not yet introduced a technical term of vocabulary.
