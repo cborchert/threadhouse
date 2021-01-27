@@ -8,15 +8,15 @@
   --primary: #32353f;
   --inverse: #eee;
   --accent: #05f4b7;
-  --secondary: #3498db;
-  --tertiary: #e74c3c;
+  --secondary: #e74c3c;
+  --tertiary: #3498db;
 
   --shadow: rgba(0, 0, 0, 0.6);
   --shadow-secondary: rgba(0, 0, 0, 0.4);
 }
 
 body {
-  font-family: 'Inter', 'Arial', sans-serif;
+  font-family: 'Merriweather', 'Georgia', serif;
   color: var(--primary);
   background: var(--bg);
   line-height: 1.6;

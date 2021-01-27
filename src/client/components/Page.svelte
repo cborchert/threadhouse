@@ -3,11 +3,14 @@
   import Header from './Header.svelte';
   import Meta from './Meta.svelte';
   export let meta = {};
+  export let excludeHeader = false;
 </script>
 
 <Meta {...meta} />
 <body>
-  <Header />
+  {#if !excludeHeader}
+    <Header />
+  {/if}
   <slot name="beforeMain" />
   <main>
     <slot name="beforeContent" />

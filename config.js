@@ -16,16 +16,17 @@ module.exports = {
     // used for sitemap
     siteUrl: `https://www.example.com`,
     // used for manifest
-    name: 'Stupid simple static site generator',
-    short_name: '5sg',
-    description: 'A ssg that is made for making simple sites simple',
+    name: 'Thread House',
+    short_name: 'thread.house',
+    description: 'A coding blog for crazy people',
     icons: [
-      { src: '/static/favicon/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
-      { src: '/static/favicon/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
+      { src: '/static/favicon/icon-192x192.png', sizes: '192x192', type: 'image/png' },
+      { src: '/static/favicon/icon-512x512.png', sizes: '512x512', type: 'image/png' },
     ],
     theme_color: '#ff0000',
     background_color: '#ff0000',
     display: 'standalone',
+    authors: 'Christopher Borchert and Dave Fuhrman',
   },
   generateSitemap: true,
   generateManifest: true,

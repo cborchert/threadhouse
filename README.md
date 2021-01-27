@@ -453,7 +453,7 @@ Once obtained, the permalink is sanitized:
 
 Node 12 is necessary for the majority of unified (remark/rehype) plugins. Unfortunaltely, newer versions such as 14 is not supported. I'd recommend using [nvm](https://github.com/nvm-sh/nvm) to use the correct version.
 
-```terminal
+```
 # install nvm using cURL https://github.com/nvm-sh/nvm#install--update-script
 # install the version of node identified in .nvmrc
 > nvm install
