@@ -1,0 +1,18 @@
+{
+  "extends": ["standard", "prettier", "plugin:jsdoc/recommended"],
+  "plugins": ["prettier", "jest", "jsdoc"],
+  "rules": {
+    "prettier/prettier": ["error"]
+  }, 
+  "env": {
+    "jest/globals": true
+  },
+  "settings":{
+    "jsdoc": {
+      "preferredTypes": { 
+        "object<>": "Object",
+        "object": "Object"
+      }
+    }
+  }
+}
